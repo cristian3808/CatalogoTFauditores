@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2024 a las 17:17:57
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 7.4.30
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 24-04-2025 a las 13:43:50
+-- Versión del servidor: 10.11.10-MariaDB
+-- Versión de PHP: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `card`
+-- Base de datos: `u498964512_catalogotf`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
   `categoria` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `categorias`
@@ -52,7 +52,7 @@ CREATE TABLE `productos` (
   `descripcion` text NOT NULL,
   `imagen` varchar(50) NOT NULL,
   `id_categoria` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
@@ -817,14 +817,14 @@ CREATE TABLE `proyectos` (
   `proyecto` varchar(255) NOT NULL,
   `codigo_acceso` varchar(50) NOT NULL,
   `codigo_acceso_activo` tinyint(1) DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `proyectos`
 --
 
 INSERT INTO `proyectos` (`id`, `proyecto`, `codigo_acceso`, `codigo_acceso_activo`) VALUES
-(27, 'Admin', 'TF2024*', 1);
+(27, 'Admin', 'TF2025*', 1);
 
 -- --------------------------------------------------------
 
@@ -837,7 +837,7 @@ CREATE TABLE `usuarios` (
   `usuario` varchar(20) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `clave` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -846,7 +846,7 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id`, `usuario`, `nombre`, `clave`) VALUES
 (6, 'Administrador', 'TF', '5998131fe7a7bddfde5cbdf01bfcc6fb'),
 (7, 'Admin', 'Admin TF', '5998131fe7a7bddfde5cbdf01bfcc6fb'),
-(8, 'TF', 'TF', '5998131fe7a7bddfde5cbdf01bfcc6fb');
+(8, 'TF', 'TF', 'tf2712117\r\n');
 
 --
 -- Índices para tablas volcadas
@@ -886,7 +886,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
